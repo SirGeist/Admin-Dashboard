@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: lightgray;
+}
+
+.sidebar {
+  background-color: blue;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  height: 100vh;
+  width: 200px;
+  padding: 20px;
+  color: white;
+}
+
+.logo img {
+  max-width: 100%;
+}
+
+.title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-rows: auto repeat(9, auto);
+  gap: 5px;
+  margin-top: -50px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-menu a:hover {
+  text-decoration: underline;
+}
