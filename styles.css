@@ -17,7 +17,7 @@ body {
   display: grid;
   font-family: var(--body-font);
   grid-template-columns: 15em 1fr;
-  height: 100vh;
+  height: 100%;
   font-size: 1rem;
   color: #333;
 }
@@ -43,7 +43,7 @@ nav svg {
   display: grid;
   align-content: start;
   gap: 2em;
-  height: 100%;
+  height: 100vh;
   position: sticky;
   top: 0;
 }
@@ -108,6 +108,12 @@ nav svg {
   width: 1em;
 }
 
+.searchbar form {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
 #bell-icon {
   height: 1em;
 }
@@ -147,4 +153,30 @@ nav svg {
 #search {
   border-radius: 20px;
   padding: 12px;
+}
+
+.user-info {
+  display: grid;
+  grid-template-columns: 5em 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  gap: 1em;
+}
+
+#profile-img-big + p {
+  opacity: 0.8;
+  font-size: 1rem;
+  margin-bottom: -3px;
+  align-self: end;
+}
+
+#profile-img-big + p + p {
+  align-self: start;
+  font-size: 1.5rem;
+  font-weight: 750;
+  margin-top: -15px;
+}
+
+#profile-img-big {
+  grid-row: 1/3;
 }
