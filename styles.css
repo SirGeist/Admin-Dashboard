@@ -91,3 +91,60 @@ nav svg {
   color: #fff;
   text-decoration: none;
 }
+
+/*Search bar*/
+
+.header {
+  padding: 1.5em 3em;
+  grid-area: 1/2/2/3;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  row-gap: 1.5em;
+  background-color: var(--tertiary-color);
+}
+
+.searchbar img {
+  height: 1em;
+  width: 1em;
+}
+
+#bell-icon {
+  height: 1em;
+}
+.searchbar,
+.notification-container {
+  display: flex;
+  gap: 1.5em;
+  align-items: center;
+}
+
+.notification-container {
+  justify-self: self-end;
+}
+
+#profile-img-sm {
+  background-color: white;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #333;
+}
+
+#profile-img-big {
+  background-color: white;
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #333;
+}
+
+.searchbar {
+  gap: 0.5em;
+}
+
+#search {
+  border-radius: 20px;
+  padding: 12px;
+}
