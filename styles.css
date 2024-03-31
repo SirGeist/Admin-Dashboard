@@ -1,42 +1,93 @@
-body {
+:root {
+  --primary-color: #3f51b5; /* Adjusted primary color to blue */
+  --secondary-color: #f44336; /* Red is replaced with a secondary color */
+  --tertiary-color: #2196f3; /* Light blue is replaced with tertiary color */
+  --accent-color: #edc586;
+  --header-font: "Roboto", sans-serif; /* Changed header font */
+  --body-font: "Roboto", sans-serif; /* Changed body font */
+}
+
+* {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: lightgray;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  font-family: var(--body-font);
+  grid-template-columns: 15em 1fr;
+  height: 100vh;
+  font-size: 1rem;
+  color: #333;
+}
+
+nav svg {
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.branding img {
+  width: 2em;
+  height: 2em;
 }
 
 .sidebar {
-  background-color: blue;
+  grid-area: 1/1/3/2;
+}
+
+.sidebar nav {
+  padding: 1.5em;
+  color: #fff;
+  background: var(--primary-color);
   display: grid;
-  grid-template-columns: auto 1fr;
+  align-content: start;
+  gap: 2em;
+  height: 100%;
+  position: sticky;
+  top: 0;
+}
+
+.branding {
+  display: flex;
+  gap: 1em;
   align-items: center;
-  height: 100vh;
-  width: 200px;
-  padding: 20px;
-  color: white;
 }
 
-.logo img {
-  max-width: 100%;
+.branding h3 {
+  font-size: 1.5rem;
 }
 
-.title {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.nav-menu {
+.sidebar nav ul {
   display: grid;
-  grid-template-rows: auto repeat(9, auto);
-  gap: 5px;
-  margin-top: -50px;
+  grid-template-columns: 1fr;
+  gap: 1em;
 }
 
-.nav-menu a {
+.sidebar nav ul li {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  list-style-type: none;
+  font-size: 1.125rem;
+}
+
+.sidebar nav ul li:hover a,
+.active a {
+  transition: all ease-in-out 0.2s;
+  transform: translateX(-5px);
+  color: var(--tertiary-color);
   text-decoration: none;
-  color: white;
 }
 
-.nav-menu a:hover {
-  text-decoration: underline;
+.sidebar nav ul li:hover svg,
+.active svg {
+  transition: all ease-in-out 0.2s;
+  transform: scale(1.3);
+  fill: var(--tertiary-color);
+}
+
+.sidebar nav ul li a:not(.active a) {
+  color: #fff;
+  text-decoration: none;
 }
