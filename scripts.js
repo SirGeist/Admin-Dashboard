@@ -56,3 +56,64 @@ function generateAnnouncementItems() {
 
 // Call the function to generate announcement items
 generateAnnouncementItems();
+
+// Trending data
+const trendingData = [
+  {
+    username: "@apple",
+    description: "Brand New Apple Box!",
+    image: "assets/icons/apple_logo_black.png",
+  },
+  {
+    username: "@microsoft",
+    description: "Introducing Windows 12",
+    image: "assets/icons/microsoft_logo.png",
+  },
+  {
+    username: "@metaverse",
+    description: "Improvements to our virtual environment",
+    image: "assets/icons/meta_logo.png",
+  },
+  {
+    username: "@tesla_official",
+    description: "Cybertrucks are on sell for $1!",
+    image: "assets/icons/tesla_logo.png",
+  },
+];
+
+// Function to generate trending items
+function generateTrendingItems() {
+  const container = document.querySelector(".trending-container");
+
+  // Loop through the trendingData array and generate HTML for each item
+  trendingData.forEach((item, index) => {
+    const trendingItem = document.createElement("div");
+    trendingItem.classList.add("trending-item");
+
+    const img = document.createElement("img");
+    img.src = item.image;
+    img.alt = "";
+
+    const username = document.createElement("p");
+    username.classList.add("trending-username");
+    username.textContent = item.username;
+
+    const description = document.createElement("p");
+    description.classList.add("trending-desc");
+    description.textContent = item.description;
+
+    trendingItem.appendChild(img);
+    trendingItem.appendChild(username);
+    trendingItem.appendChild(description);
+
+    container.appendChild(trendingItem);
+
+    // Add a line separator after each item except for the last one
+    if (index < trendingData.length - 1) {
+      container.appendChild(document.createElement("hr"));
+    }
+  });
+}
+
+// Call the function to generate trending items
+generateTrendingItems();
