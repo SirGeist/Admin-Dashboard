@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sidebar Navigation</title>
+    <title>Dashboard</title>
 
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -156,7 +156,7 @@
         <button type="button">Share</button>
       </div>
     </header>
-    <div class="main-container">
+    <main class="main-container">
       <div class="project-section">
         <h3>Your Projects</h3>
         <div class="proj-container">
@@ -195,10 +195,29 @@
               <img src="assets/icons/share-variant-outline.svg" />
             </div>
           </div>
+          <div class="proj-card">
+            <div class="proj-content">
+              <p class="proj-title">Calculator</p>
+              <p class="proj-desc">
+                Created a simple calculator app that allows user to solve simple
+                mathematical equations. Users can use decimals, calculate
+                percentages, perform simple arithetic operations, and clear the
+                results.
+              </p>
+            </div>
+            <div class="proj-act">
+              <img src="assets/icons/star-plus-outline.svg" />
+              <img src="assets/icons/eye-plus-outline.svg" />
+              <img src="assets/icons/share-variant-outline.svg" />
+            </div>
+          </div>
         </div>
       </div>
-      <div class="announcement-section"></div>
-      <div class="feedback-section"></div>
-    </div>
+      <section class="announcement-section">
+        <h3>Announcments</h3>
+        <div class="announcement-container" id="announcement-container"></div>
+      </section>
+    </main>
+    <script src="scripts.js"></script>
   </body>
 </html>
